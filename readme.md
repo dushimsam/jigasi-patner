@@ -1,7 +1,7 @@
 Jigasi-Patner
 =============
 
-Jitsi Gateway to SIP Patner: this is an external  server-side application that offers external speech-to-text APIs that works  with Jigasi-server side engine to  offer appropriate transcription services.
+Jitsi Gateway to SIP Patner: This is an external server-side application that performs speech-to-text tasks and expose related APIs to work with Jigasi-server side engine in offering appropriate audio transcription services.
 
 Install and run
 ==============
@@ -26,19 +26,27 @@ Install and run
 5. View In Page
 
  ```
- open : localhost:5008
+ open your browser and visit : http://localhost:5000/
  ```
-6. Read the Apis Documentation
+
+6. Test the Api
 
  ```
- localhost:5008/documentation
+Make a post file upload request of wav audio file on this API :  http://localhost:5000/api/v1/transcription/upload-audio
  ```
+
+6. Find more APIs Documentation
+
+ ```
+ open your browser and visit : http://localhost:5008/documentation
+ ```
+
 
 How it works
 ============
 
 Jigasi server engine initiates a post request to the server in an upload of a wav file. Then
-the server uses a pre-trained model to offer the corresponding transcription.
+the server is going to load a pre-trained model and then offer a best match prediction correponding to a transcription of the received audio.
 
 Input
 ==============
@@ -52,8 +60,8 @@ A text transcripted from that input audio file.
 Current Model Configuration configuration
 ========================================
 
-We are currently integrated a pre-trained model DeepSpeech from Mozilla.
-We are going to migrated to more accurate models in the future versions.
+We have currently integrated a pre-trained model DeepSpeech from Mozilla in version 1 of this service.
+We are going to migrate to more accurate models in the future versions.
 
 Download the pre-trained model (1.8GB):
 
