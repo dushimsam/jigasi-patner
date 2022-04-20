@@ -32,6 +32,6 @@ exports.upload_audio = async function (req:any, res:any) {
 
     let result = processedModel.stt(audioBuffer);
 
-    return res.status(400).send(result);
+    return res.status(201).send(result);
   });
 };
