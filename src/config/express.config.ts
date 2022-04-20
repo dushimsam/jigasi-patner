@@ -1,8 +1,8 @@
 import express from "express";
 const path = require("path");
 
-const app = express();
+const APP = express();
 
-app.use("/public", express.static(path.join(__dirname, "public")));
+APP.use("/public", express.static(path.join(__dirname, "public")));
 
-exports.app = app;
+exports.app = APP;
