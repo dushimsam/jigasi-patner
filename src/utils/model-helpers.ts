@@ -3,14 +3,17 @@ const Wav = require("node-wav");
 const DeepSpeech = require("deepspeech");
 const Duplex = require("stream").Duplex;
 
-let modelPath = "./models/deepspeech-0.9.3-models.pbmm";
-const model = new DeepSpeech.Model(modelPath);
+let modelPath = "../../models/deepspeech-0.9.3-models.pbmm";
+let model= new DeepSpeech.Model(modelPath);;
+
+  
+
 
 exports.desiredSampleRate = model.sampleRate();
 
 const processFileToBuffer = (fileName: string) => {
 
-  let scorerPath = "./models/deepspeech-0.9.3-models.scorer";
+  let scorerPath = "../../models/deepspeech-0.9.3-models.scorer";
 
   model.enableExternalScorer(scorerPath);
 
