@@ -36,6 +36,9 @@
     "util": "^0.11.1",
     "dotenv": "^8.2.0"
   },
+  "engines": {
+    "node": "14.17.3"
+  },
   "devDependencies": {
     "@faker-js/faker": "^6.0.0-alpha.5",
     "@types/cors": "^2.8.12",
