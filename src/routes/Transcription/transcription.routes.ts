@@ -1,4 +1,4 @@
-const express = require("express")
+import express from "express"
 const { uploadAudio} = require("../../middlewares/multer.middleware");
 const {isUserCategory} = require("../../middlewares/authorisation/isUserCategory.middleware");
 const {requestHandler} = require("../../utils/common");
@@ -31,7 +31,5 @@ const router = express.Router();
  */
  router.post('/upload-audio', uploadAudio.single('audio'), requestHandler(controller.upload_audio))
 
-
-
  
- module.exports = router
+export default router

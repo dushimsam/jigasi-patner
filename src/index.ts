@@ -9,8 +9,9 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const cors = require("cors");
 
-const {app} = require("../config/express.config.ts");
+const {app} = require("./config/express.config");
 
+import { Request, Response } from "express";
 import transcriptionHandler from "./routes/Transcription/transcription.routes";
 
 const PORT = process.env.PORT || 3000;
@@ -50,7 +51,7 @@ const swaggerOptions = {
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
-app.get("/documentation/docs.json", function (req, res) {
+app.get("/documentation/docs.json", function (req:Request, res:Response) {
   res.setHeader("Content-Type", "application/json");
   res.send(swaggerDocs);
 });
