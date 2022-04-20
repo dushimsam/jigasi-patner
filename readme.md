@@ -61,7 +61,7 @@ Current Model Configuration configuration
 ========================================
 
 We have currently integrated a pre-trained model DeepSpeech from Mozilla in version 1 of this service.
-We are going to migrate to a more advanced accurate models in the future versions.
+We are going to migrate to a more advanced accurate models in the future versions of this functionality.
 
 Download the pre-trained model (1.8GB):
 
