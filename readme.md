@@ -60,7 +60,7 @@ A text transcripted from that input audio file.
 Current Model Configuration configuration
 ========================================
 
-We have currently integrating a pre-trained model DeepSpeech from Mozilla in version 1 of this service.
+We have currently integrated a pre-trained model DeepSpeech from Mozilla in version 1 of this service.
 We are going to migrate to more accurate models in the future versions.
 
 Download the pre-trained model (1.8GB):
