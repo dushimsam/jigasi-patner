@@ -8,7 +8,9 @@ const {
 const {
   desiredSampleRate,
   processAudioStream,
+  processedModel
 } = require("../../utils/model-helpers");
+
 const MemoryStream = require("memory-stream");
 const Sox = require("sox-stream");
 
@@ -28,7 +30,7 @@ exports.upload_audio = async function (req:any, res:any) {
     const audioLength = (audioBuffer.length / 2) * (1 / desiredSampleRate);
     console.log("audio length", audioLength);
 
-    let result = model.stt(audioBuffer);
+    let result = processedModel.stt(audioBuffer);
 
     return res.status(400).send(result);
   });

@@ -4,7 +4,7 @@ const DeepSpeech = require("deepspeech");
 const Duplex = require("stream").Duplex;
 
 let modelPath = "./models/deepspeech-0.9.3-models.pbmm";
-let model = new DeepSpeech.Model(modelPath);
+const model = new DeepSpeech.Model(modelPath);
 
 exports.desiredSampleRate = model.sampleRate();
 
@@ -72,3 +72,4 @@ exports.processAudioStream = (path:any) => {
   return audioStream;
 };
 
+exports.processedModel = model;
