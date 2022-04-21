@@ -26,13 +26,13 @@ Install and run
 5. View In Page
 
  ```
- open your browser and visit : http://localhost:5000/
+ open your browser and visit : http://localhost:5008/
  ```
 
 6. Test the Api
 
  ```
-Make a post file upload request of wav audio file on this API :  http://localhost:5000/api/v1/transcription/upload-audio
+Make a post file upload request of wav audio file on this API :  http://localhost:5008/api/v1/transcription/upload-audio
  ```
 
 6. Find more APIs Documentation
